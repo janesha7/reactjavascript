@@ -8,6 +8,9 @@ const Counter = () => {
     setTask([...tasks,{name:text,completd: false}])
     setText("")
   }
+  const deleteTask =(index)=>{
+    setTask(tasks.filter((_, i)=> i !== index));
+  };
   return (
     <>
       <h1>To-Do List</h1>
