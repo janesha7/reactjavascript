@@ -8,8 +8,8 @@ const Counter = () => {
     setTask([...tasks,{name:text,completd: false}])
     setText("")
   }
-  const deleteTask =(index)=>{
-    setTask(tasks.filter((_, i)=> i !== index));
+  const deleteTask =()=>{
+    setTask(tasks.filter((_,i)=>i!== index))
   };
   return (
     <>
@@ -23,7 +23,11 @@ const Counter = () => {
       <ul>
         {tasks.map((task,index)=>(
             <li key={index}>
-                {task.name}
+              <input type="checkbox" />
+             
+                
+                <span>{task.name}</span>
+                <button onClick={()=>deleteTask(index)}>delete</button>
             </li>
 
         ))}
@@ -34,3 +38,4 @@ const Counter = () => {
 }
 
 export default Counter;
+
