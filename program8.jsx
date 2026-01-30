@@ -9,11 +9,15 @@ function Tab() {
                 <button
                 style={activeTab==="home"? styles.activeBtn:styles.btn}
                 onClick={()=>setActiveTab("home")}
-                >
+                >home
 
                 </button>
                 <button
-                style={activeTab ==="about"? styles.activebtn:styles.btn}
+                style={activeTab ==="about"? styles.activeBtn:styles.btn}
+                onClick={()=>setActiveTab("about")}>about
+                </button>
+                <button
+                style={activeTab ==="contact"? styles.activeBtn:styles.btn}
                 onClick={()=>setActiveTab("contact")}>contact
                 </button>
             </div>
@@ -24,7 +28,7 @@ function Tab() {
                     
                 )}
                 {activeTab === "about"&&(
-                    <p></p>
+                    <p>welcome to the about page this is aboutpage</p>
                 )}
                 {activeTab ==="contact"&&<p>Contact us at: contact@example.com</p>}
 
@@ -70,3 +74,4 @@ contentBox: {
     background:"white"
 },
 }
+export default Tab
